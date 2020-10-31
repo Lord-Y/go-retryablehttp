@@ -714,7 +714,7 @@ func (c *Client) Do(req *Request) (*http.Response, error) {
 			req.Method, req.URL, attempt)
 	}
 
-	return nil, fmt.Errorf("%s %s giving up after %d attempt(s): %w",
+	return resp, fmt.Errorf("%s %s giving up after %d attempt(s): %w",
 		req.Method, req.URL, attempt, err)
 }
 
